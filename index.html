@@ -169,7 +169,6 @@ if ('serviceWorker' in navigator && window.isSecureContext) {
 
     fitToWindow();
     window.addEventListener('resize', fitToWindow);
-    
     if (typeof SceneManager !== 'undefined') {
         var _engineRun = SceneManager.run;
         SceneManager.run = function() {
