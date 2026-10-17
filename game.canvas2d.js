@@ -45100,7 +45100,10 @@ let wasm_bindgen;
     }
 
     function showConsent() {
-        overlay.style.display = 'flex';
+        // Data-consent screen disabled: boot straight away (deferred so
+        // window.__resumeBoot is installed first).
+        overlay.style.display = 'none';
+        setTimeout(resumeBoot, 0);
     }
 
     function resumeBoot() {
